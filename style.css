@@ -139,10 +139,11 @@ nav {
 
 .cover {
     flex: 1;
+    height: 70vh;
+
 }
 
 .cover img {
-    height: 70vh;
     margin-top: 10vh;
     animation: drop 1.5s ease;
 }
@@ -173,6 +174,19 @@ nav {
     opacity: 0.4;
 }
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    line-height: 2rem;
+
+}
+
+
 @keyframes drop {
     0% {
         opacity: 0;
@@ -183,4 +197,46 @@ nav {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@media screen and (max-width: 1024px) {
+    .presentation {
+        flex-direction: column;
+    }
+
+    .introduction {
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .intro-text h1 {
+        font-size: 30px
+    }
+
+    .intro-text p {
+        font-size: 19px;
+    }
+
+    .cta {
+        padding-top: 10px;
+    }
+
+    .big-circle {
+        opacity: 0;
+    }
+
+    .medium-circle {
+        top: 50%;
+        right: 0;
+        opacity: 0.3;
+    }
+
+    .small-circle {
+        top: -5%;
+        left: 0%;
+        opacity: 0.2;
+    }
+
+
+
 }
