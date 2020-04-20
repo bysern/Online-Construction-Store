@@ -9,6 +9,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --main-bg-color: #FFBD4A;
+    --main-txt-color: #585772;
+}
+
 button {
     font-family: 'Poppins', sans-serif;
 }
@@ -21,7 +26,7 @@ header {
     align-items: center;
 }
 
-.logo-container,
+.logo,
 .nav-links,
 .cart {
     display: flex;
@@ -32,7 +37,7 @@ i {
     display: block;
 }
 
-.logo-container {
+.logo {
     height: 10vh;
     flex: 1;
 }
@@ -48,7 +53,7 @@ nav {
 }
 
 .nav-link:hover {
-    border-bottom: 3px solid #FFBD4A;
+    border-bottom: 3px solid var(--main-bg-color);
 }
 
 .nav-link {
@@ -59,15 +64,32 @@ nav {
 
 }
 
+.burger {
+    display: none;
+    margin: 0px 20px 0px 40px;
+    cursor: pointer;
+}
+
+.burger div {
+    right: 20px;
+    width: 20px;
+    height: 3px;
+    background-color: purple;
+    margin: 2px;
+    transition: all 0.3s ease;
+
+}
+
+
 .cart {
     flex: 1;
     justify-content: flex-end;
     font-size: 35px;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .cart:hover {
-    color: #FFBD4A;
+    color: var(--main-bg-color);
 }
 
 .presentation {
@@ -102,39 +124,39 @@ nav {
 }
 
 .cta-select {
-    border: 2px solid #FFBD4A;
+    border: 2px solid var(--main-bg-color);
     background: transparent;
-    color: #FFBD4A;
+    color: var(--main-bg-color);
     width: 150px;
     height: 50px;
     cursor: pointer;
     font-size: 16px;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
 .cta-select:hover {
     border: none;
-    background: #FFBD4A;
+    background: var(--main-bg-color);
     color: white;
 
 }
 
 .cta-add {
     border: none;
-    background: #FFBD4A;
+    background: var(--main-bg-color);
     color: white;
     width: 150px;
     height: 50px;
     cursor: pointer;
     font-size: 16px;
     margin: 30px 0px 0px 30px;
-    transition: 0.4s;
+    transition: 0.2;
 }
 
 .cta-add:hover {
-    border: 2px solid #FFBD4A;
+    border: 2px solid var(--main-bg-color);
     background: transparent;
-    color: #FFBD4A;
+    color: var(--main-bg-color);
 }
 
 .cover {
@@ -175,7 +197,6 @@ nav {
 }
 
 footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -237,6 +258,82 @@ footer {
         opacity: 0.2;
     }
 
+    header {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        width: 50%;
+        top: 10vh;
+        background-color: var(--main-bg-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-2px, 4px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-2px, -4px);
+}
 
 
+#main .content,
+h2 {
+    margin: 30px 50px 30px 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 75vw;
+}
+
+#main h3,
+h2 {
+    margin: 30px 50px 20px 50px;
 }
