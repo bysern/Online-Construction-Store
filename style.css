@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Poppins', sans-serif;
+    min-height: 100%;
 }
 
 :root {
@@ -196,18 +196,7 @@ nav {
     opacity: 0.4;
 }
 
-footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: grey;
-    color: white;
-    text-align: center;
-    line-height: 2rem;
-
-}
-
-
+/* tools drop animation */
 @keyframes drop {
     0% {
         opacity: 0;
