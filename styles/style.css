@@ -18,6 +18,7 @@ button {
     font-family: 'Poppins', sans-serif;
 }
 
+/* HEADER/NAVIGATION with burger menu */
 header {
     display: flex;
     width: 90%;
@@ -32,7 +33,6 @@ header {
     display: flex;
 }
 
-
 i {
     display: block;
 }
@@ -44,7 +44,6 @@ i {
 
 nav {
     flex: 2;
-
 }
 
 .nav-links {
@@ -61,7 +60,17 @@ nav {
     font-size: 18px;
     text-decoration: none;
     transition: 0.4s left ease;
+}
 
+.cart {
+    flex: 1;
+    justify-content: flex-end;
+    font-size: 35px;
+    transition: 0.2s;
+}
+
+.cart:hover {
+    color: var(--main-bg-color);
 }
 
 .burger {
@@ -77,21 +86,35 @@ nav {
     background-color: purple;
     margin: 2px;
     transition: all 0.3s ease;
-
 }
 
+/* nav links mobile menu animation */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
 
-.cart {
-    flex: 1;
-    justify-content: flex-end;
-    font-size: 35px;
-    transition: 0.2s;
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
-.cart:hover {
-    color: var(--main-bg-color);
+/* burger animation */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-2px, 4px);
 }
 
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-2px, -4px);
+}
+
+/* MAIN SECTION index */
 .presentation {
     display: flex;
     width: 90%;
@@ -120,7 +143,6 @@ nav {
 
 .cta {
     padding: 50px 0px 0px 0px;
-
 }
 
 .cta-select {
@@ -138,7 +160,6 @@ nav {
     border: none;
     background: var(--main-bg-color);
     color: white;
-
 }
 
 .cta-add {
@@ -209,6 +230,69 @@ nav {
     }
 }
 
+/* about page */
+#main .content,
+h2 {
+    margin: 30px 50px 30px 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 75vw;
+}
+
+#main h3,
+h2 {
+    margin: 30px 50px 20px 50px;
+}
+
+
+/* CONTACT PAGE */
+
+/* Style inputs, select elemnets and textareas */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+/*submit button */
+input[type=submit] {
+    background-color: #FFBD4A;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: grey;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+}
+
+.container h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/* mobile responsive */
 @media screen and (max-width: 1024px) {
     .presentation {
         flex-direction: column;
@@ -250,7 +334,6 @@ nav {
     header {
         width: 100%;
     }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -278,51 +361,9 @@ nav {
 
     .burger {
         display: block;
-
     }
 }
 
 .nav-active {
     transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-2px, 4px);
-}
-
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-2px, -4px);
-}
-
-
-#main .content,
-h2 {
-    margin: 30px 50px 30px 50px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 75vw;
-}
-
-#main h3,
-h2 {
-    margin: 30px 50px 20px 50px;
 }
