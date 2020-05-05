@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products</title>
+    <title>B2B Store</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
         integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
@@ -14,13 +14,13 @@
 <body>
     <header>
         <div class="logo">
-            <a href="/index.html"><img src="./img/input-onlinejpgtools.png" alt="logo"></a>
+            <a href="./index.php"><img src="./img/input-onlinejpgtools.png" alt="logo"></a>
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a class="nav-link" href="/Products.html">Products</a></li>
-                <li><a class="nav-link" href="/About.html">About us</a></li>
-                <li><a class="nav-link" href="/Contact.html">Contact</a></li>
+                <li><a class="nav-link" href="./Products.php">Products</a></li>
+                <li><a class="nav-link" href="./About.php">About us</a></li>
+                <li><a class="nav-link" href="./Contact.php">Contact</a></li>
             </ul>
 
         </nav>
@@ -36,8 +36,3 @@
         </div>
 
     </header>
-
-    <script src="scripts/script.js"></script>
-</body>
-
-</html>
