@@ -1,37 +1,39 @@
 <?php
     include('includes/header.php');
+    include('includes/form_process.php');
+
 ?>
-    <main>
-        <section>
-            <div class="container">
-                <h1>Do not hesitate to contact us!</h1>
-                <form action="#">
+<main>
+    <section id="contact">
+        <div class="container">
+            <h1>Do not hesitate to contact us!</h1>
+            <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
 
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Type your name">
+                <input type="text" name="name" placeholder="Type your name" value="<?= $name ?>" autofocus>
+                <span class="error"><?= $name_error ?></span>
 
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Type your last name">
+                <input type="text" name="email" placeholder="Type your email" value="<?= $email ?>">
+                <span class="error"><?= $email_error ?></span>
 
-                    <label for="country">Country</label>
-                    <select id="country" name="country">
-                        <option value="australia">Poland</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
-                    </select>
 
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.."
-                        style="height:200px"></textarea>
+                <select name="country">
+                    <option value="australia">Poland</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
 
-                    <input type="submit" value="Submit">
+                <label for="subject">Subject</label>
+                <textarea name="message" placeholder="Write something.." value="<?= $message ?>"
+                    style="height:200px"></textarea>
 
-                </form>
-            </div>
-        </section>
-    </main>
+                <input type="submit" value="Submit" name="submit">
+                <div class="success"><?= $success; ?></div>
+            </form>
+        </div>
+    </section>
+</main>
 
-    <script src="scripts/script.js"></script>
+<script src="scripts/script.js"></script>
 </body>
 
 </html>
