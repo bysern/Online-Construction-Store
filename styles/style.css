@@ -138,7 +138,7 @@ nav {
 .into-text p {
     margin-top: 5px;
     font-size: 22px;
-    color: #585772;
+    color: var(--main-txt-color);
 }
 
 .cta {
@@ -231,8 +231,8 @@ nav {
 }
 
 /* about page */
-#main .content,
-h2 {
+#about .content,
+#about h2 {
     margin: 30px 50px 30px 50px;
     justify-content: center;
     align-items: center;
@@ -242,8 +242,8 @@ h2 {
     width: 75vw;
 }
 
-#main h3,
-h2 {
+#about h3,
+#about h2 {
     margin: 30px 50px 20px 50px;
 }
 
@@ -259,7 +259,7 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-top: 6px;
+    margin-top: 10px;
     margin-bottom: 16px;
     resize: vertical
 }
@@ -289,8 +289,22 @@ input[type=submit]:hover {
 .container h1 {
     text-transform: uppercase;
     text-align: center;
+    margin: 30px 0 15px 0;
+    color: var(--main-txt-color);
 }
 
+span.error {
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-top: -9px;
+
+}
+
+.success {
+    font-size: 40px;
+    text-align: center;
+}
 
 /* mobile responsive */
 @media screen and (max-width: 1024px) {
@@ -366,4 +380,45 @@ input[type=submit]:hover {
 
 .nav-active {
     transform: translateX(0%);
+}
+
+/*Services*/
+
+.sec-services {
+    background: #f9f9f9;
+    margin-top: 5%;
+}
+
+.sec-services h1 {
+    font-size: 48px;
+    font-weight: 500;
+    background: linear-gradient(to right, #494964, #6f6f89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sec-services h2 {
+    text-align: center;
+    margin: 10px 0 10px 0;
+    color: var(--main-txt-color);
+
+}
+
+.sec-services i {
+    display: block;
+    margin: auto;
+    width: 68px;
+    height: 90px;
+}
+
+.sec-services p {
+    justify-content: center;
+    text-align: center;
+
+}
+
+/*Testimonials*/
+
+.sec-testimonials {
+    background: #f9f9f9;
 }
