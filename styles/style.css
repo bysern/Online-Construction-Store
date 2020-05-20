@@ -51,15 +51,15 @@ nav {
     list-style: none;
 }
 
-.nav-link:hover {
-    border-bottom: 3px solid var(--main-bg-color);
-}
-
 .nav-link {
     color: #5f5f79;
     font-size: 18px;
     text-decoration: none;
-    transition: 0.4s left ease;
+    transition: 0.4s;
+}
+
+.nav-link:hover {
+    border-bottom: 3px solid var(--main-bg-color);
 }
 
 .cart {
@@ -247,6 +247,20 @@ nav {
     margin: 30px 50px 20px 50px;
 }
 
+/* PRODUCT PAGE */
+.img-fluid {
+    max-width: 90%;
+    height: auto;
+}
+
+.fa-star {
+    color: yellowgreen;
+    padding: 3% 0;
+}
+
+.card {
+    margin: 20px;
+}
 
 /* CONTACT PAGE */
 
