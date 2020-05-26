@@ -1,5 +1,6 @@
 <?php
     include('includes/header.php');
+
 ?>
 
 <main>
@@ -10,8 +11,10 @@
                 <p>The best construction assortment on the web</p>
             </div>
             <div class="cta">
-                <button class="cta-select">See more</button>
-                <button class="cta-add">Add to cart</button>
+                <a href="./Contact.php">
+                    <button class="cta-select">Contact us!</button></a>
+                <a href="./Products.php">
+                    <button class="cta-add">See more!</button> </a>
             </div>
         </div>
         <div class="cover">

@@ -27,9 +27,20 @@
 
         </nav>
 
-        <div class="cart">
-            <i class="fas fa-shopping-cart"></i>
-        </div>
+        <a href="./cart.php" class="nav-item active nav-link">
+            <h5 class="px-5 cart">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <?php
+                if(isset($_SESSION['cart'])){
+                    $count = count($_SESSION['cart']);
+                    echo "<span id='cart_count' class='text-warning bg-light px-3'>$count</span>";
+                } else{
+                    echo "<span id='cart_count' class='text-warning bg-light px-3'> 0</span>";
+                }
+                ?>
+
+            </h5>
+        </a>
 
         <div class="burger">
             <div class="line1"></div>
