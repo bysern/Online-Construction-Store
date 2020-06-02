@@ -81,7 +81,9 @@
                                         </h6>
                                     </h6>
                                 </div>
-
+                                <a href="./checkout.php">
+                                    <button class="btn-warning border rounded px-3">CHECKOUT</button>
+                                </a>
                             </div>
                         </h6>
                     </div>

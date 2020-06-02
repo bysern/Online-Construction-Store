@@ -35,7 +35,7 @@
     
             // Create new session variable
             $_SESSION['cart'][0] = $item_array;
-            print_r($_SESSION['cart']);
+            //print_r($_SESSION['cart']);
         }
     }
 
@@ -43,6 +43,36 @@
 
 <section id="products">
     <div class="container">
+        <form action="" method="post">
+            <input type="text" name="search">
+            <input type="submit" name="submit" value="Search">
+
+        </form>
+        <?php
+
+    if(isset($_POST['submit'])){
+
+        $search_value = $_POST["search"];
+
+    if($db->connect_error){
+    echo 'Connection Faild: '.$db->connect_error;
+    }else{
+        $sql="select * from products where product_name like '%$search_value%'";
+
+        $res=$db->query($sql);
+
+        if (mysqli_num_rows($res) > 0) {
+            while($row=$res->fetch_assoc()){
+              echo "Product found: </td><td>".$row['product_name']."</td></tr>";
+            }
+          }else{
+              echo "No products Found<br><br>";
+             }
+            }       
+
+        }
+    
+?>
         <div class="row text-center py-5">
             <?php 
             $sql = "SELECT * FROM products";
